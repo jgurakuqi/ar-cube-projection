@@ -8,8 +8,11 @@
 
 
 ## Description
-The goal of the project is to extract the pose of an object in a given video, given the 2D and 3D coordinates of reference markers per each frame,
-and project a virtual cube over each frame using the estimated poses.
+The goal of the project/assignment is to extract the pose of an object in a given video, given the 2D and 3D coordinates of reference markers per each 
+frame, and project a virtual cube over each frame using the estimated poses. The project includes also an extra python script which allows to extract
+the 3D and 2D coordinates for a specific problem, hence useful only for the given dataset.
+The said coordinates are provided through a CSV file.
+The project implements multi-threading for the main task, allowing to achieve optimal performance, especially with long videos.
 
 
 ## Installation
@@ -29,15 +32,21 @@ To run the projects it's required an IDE or a bash/shell. In case of a bash/shel
 python augmented_reality.py
 ```
 
+If the file containing the 2D-3D coordinates used by the main program doesn't exist, the main will automatically invoke the *marker_identification_and_tracking* function
+from the *detection_and_tracking.py* script to produce such CSV file.
+The 2 python scripts hardcode the input videos' format as mp4.
+
 # Contributing
 
 This project allows to extract from a video the pose of an object given a set of object points, their corresponding image projections, as well as the camera intrinsic 
 matrix and the distortion coefficients, and to project the chosen 3D-world points representing a cube over the said input video.
-This project could be improved to be generalized to different shapes instead of a single cube.
+This project could be generalized to allow the use of different shapes and video formats.
 
 ```bash
 git clone https://github.com/jgurakuqi/ar_cube_projection
 ```
+
+As for the 3D-2D coordinates, that is a problem-specific task, which requires some analysis, determining which points to extract and how to do it in the most appropriate way.
 
 # License
 
