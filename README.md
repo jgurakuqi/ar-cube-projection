@@ -1,3 +1,5 @@
+# ar-cube-projection
+
 ## Table of Contents
 
 - [Description](#Description)
@@ -36,7 +38,7 @@ If the file containing the 2D-3D coordinates used by the main program doesn't ex
 from the *detection_and_tracking.py* script to produce such CSV file.
 The 2 python scripts hardcode the input videos' format as mp4.
 
-# Contributing
+## Contributing
 
 This project allows to extract from a video the pose of an object given a set of object points, their corresponding image projections, as well as the camera intrinsic 
 matrix and the distortion coefficients, and to project the chosen 3D-world points representing a cube over the said input video.
@@ -48,7 +50,7 @@ git clone https://github.com/jgurakuqi/ar_cube_projection
 
 As for the 3D-2D coordinates, that is a problem-specific task, which requires some analysis, determining which points to extract and how to do it in the most appropriate way.
 
-# License
+## License
 
 MIT License
 
